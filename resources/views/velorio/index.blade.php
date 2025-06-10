@@ -75,7 +75,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Finado</label>
-                        <select class="form-select" name="finado_id" required>
+                        <select class="form-select" name="finado_id" id="finado_id" required>
                             @foreach($finados as $finado)
                                 <option value="{{ $finado->id }}">{{ $finado->finado_nome }}</option>
                             @endforeach
@@ -83,7 +83,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Urna</label>
-                        <select class="form-select" name="urna_id" required>
+                        <select class="form-select" name="urna_id" id="urna_id" required>
                             @foreach($urna as $item)
                                 <option value="{{ $item->id }}">{{ $item->urna_nome }}</option>
                             @endforeach
@@ -91,7 +91,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Data Velório</label>
-                        <input type="date" class="form-control" name="velorio_data" required min="{{ \Carbon\Carbon::today()->toDateString() }}" onkeydown="return false">
+                        <input type="date" class="form-control" name="velorio_data" id="velorio_data" required min="{{ \Carbon\Carbon::today()->toDateString() }}" >
                     </div>
                     <input type="hidden" name="usuario_id" value="1">
                 </div>
@@ -134,7 +134,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Data Velório</label>
-                        <input type="date" class="form-control" name="velorio_data" id="edit_velorio_data" required onkeydown="return false">
+                        <input type="date" class="form-control" name="velorio_data" id="edit_velorio_data" required>
                     </div>
                     <input type="hidden" name="usuario_id" value="1">
                 </div>
